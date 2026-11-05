@@ -26,7 +26,7 @@ GPU não é obrigatória: em um notebook, rodando só no processador, o app fico
 
 ## Como rodar
 
-Linux:
+### Linux
 
 ```bash
 python3 -m venv .venv
@@ -39,6 +39,24 @@ Sem GPU NVIDIA, instale antes o PyTorch para CPU. O download fica bem menor:
 ```bash
 .venv/bin/pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
 ```
+
+### Windows
+
+Os passos abaixo ainda não foram testados no Windows; o projeto foi testado no Linux.
+
+1. Instale o Python 3.12 pelo site [python.org](https://www.python.org/downloads/windows/). O Tkinter já vem junto na instalação padrão.
+2. Baixe o projeto e abra o PowerShell dentro da pasta dele.
+3. Rode:
+
+```powershell
+py -m venv .venv
+.venv\Scripts\python -m pip install ultralytics opencv-python pillow
+.venv\Scripts\python main.py
+```
+
+Se a câmera não abrir, confira em **Configurações > Privacidade e segurança > Câmera** se o acesso está liberado para aplicativos da área de trabalho.
+
+Se aparecer um erro de DLL ao carregar o `torch`, instale o [Microsoft Visual C++ Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe).
 
 ## Arquivos gerados
 
