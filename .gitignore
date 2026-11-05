@@ -1,0 +1,11 @@
+# Ambiente virtual e cache do Python
+.venv/
+__pycache__/
+*.pyc
+
+# Modelo (baixado automaticamente na primeira execucao)
+*.pt
+
+# Arquivos gerados pelo app (podem conter imagens de pessoas)
+capturas/
+registros/
